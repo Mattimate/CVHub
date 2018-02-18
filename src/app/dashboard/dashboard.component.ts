@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
-import { Hero } from "@app/model";
-import { HeroService } from "@app/service";
+import { Hero } from "app/model";
+import { HeroService } from "app/service";
 
 @Component({
   selector: "app-dashboard",

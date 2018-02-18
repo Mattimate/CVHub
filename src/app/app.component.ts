@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { Logger } from "@app/service";
+import { Logger } from "app/service";
 
 const log = new Logger("APP");
 
