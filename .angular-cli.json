@@ -7,10 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -18,10 +15,24 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.css"
+      "styles": ["styles.css"],
+      "scripts": [
+        "assets/js/jquery-1.10.2.min.js",
+        "assets/js/lib/grid.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/lib/jquery.superslides.min.js",
+        "assets/js/lib/jquery.backtotop.js",
+        "assets/js/lib/jquery.parallax.js",
+        "assets/js/lib/jquery.backgroundvideo.js",
+        "assets/js/lib/venobox.min.js",
+        "assets/js/lib/waypoints.js",
+        "assets/js/lib/jquery.countTo.js",
+        "assets/js/lib/jquery.smooth-scroll.min.js",
+        "assets/js/lib/jquery.fitvid.js",
+        "assets/js/lib/jquery.backstretch.min.js",
+        "assets/js/lib/jquery.sudoslider.min.js",
+        "assets/js/main.js"
       ],
-      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
