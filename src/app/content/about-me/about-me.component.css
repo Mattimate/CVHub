@@ -1,0 +1,12 @@
+.section-wrapper {
+  padding-top: 100px;
+  background: #313941;
+  text-align: center;
+}
+
+.title-break {
+  border-top: 3px solid #ccc;
+  width: 80px;
+  margin: 40px auto 50px auto;
+  display: inline-block;
+}
