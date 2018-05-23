@@ -1,10 +1,8 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-
 import { AppRoutingModule } from "./app-routing.module";
 
 import {} from "app/service";
@@ -13,13 +11,15 @@ import {
   HomeComponent,
   HeaderComponent,
   FooterComponent,
+  CvPlusComponent,
   ContentComponent,
-  BlogComponent,
+  ProjectsComponent,
+  AboutMeComponent,
   SkillsComponent,
   ContactComponent,
   VideoProfileComponent,
-  AboutMeComponent,
-  ProjectsComponent
+  BlogComponent,
+  SkillsSidenavComponent
 } from "app/.";
 
 @NgModule({
@@ -29,13 +29,15 @@ import {
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    CvPlusComponent,
     ContentComponent,
     ProjectsComponent,
     AboutMeComponent,
-    BlogComponent,
-    VideoProfileComponent,
+    SkillsComponent,
     ContactComponent,
-    SkillsComponent
+    VideoProfileComponent,
+    BlogComponent,
+    SkillsSidenavComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

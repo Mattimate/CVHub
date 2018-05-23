@@ -15,7 +15,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["styles.css"],
+      "styles": ["styles.scss"],
       "scripts": [
         "assets/js/jquery-1.10.2.min.js",
         "assets/js/lib/grid.js",
@@ -65,7 +65,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }
