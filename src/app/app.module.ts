@@ -5,6 +5,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { AppRoutingModule } from "./app-routing.module";
 
+import { MaterialModule } from "./material.module";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 import {} from "app/service";
 import {
   AppComponent,
@@ -23,7 +27,7 @@ import {
 } from "app/.";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MaterialModule, BrowserAnimationsModule],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -39,6 +43,8 @@ import {
     BlogComponent,
     SkillsSidenavComponent
   ],
+  entryComponents: [SkillsSidenavComponent],
+
   providers: [],
   bootstrap: [AppComponent]
 })

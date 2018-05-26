@@ -1,0 +1,45 @@
+/*
+    Dialog
+*/
+.mat-dialog-title {
+  margin: 50px -10px 20px;
+  display: block;
+  background-color: #2f3238;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mat-dialog-content {
+  display: block;
+  margin: 20px -24px;
+  padding: 0 10px;
+  max-height: 85%;
+  overflow: auto;
+  background-color: #2f3238;
+  color: #fefefe;
+  /* border: solid 1px #fefefe; */
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+    Reference
+*/
+.reference {
+  background-color: #313941;
+  margin-bottom: 15px;
+  padding: 5px 5px;
+  border: solid 1px #393939;
+}
+
+.ref-title {
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 0;
+  width: 70%;
+  border-top: 3px solid #b71111;
+}

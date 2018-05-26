@@ -15,7 +15,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["styles.scss"],
+      "styles": ["styles.css"],
       "scripts": [
         "assets/js/jquery-1.10.2.min.js",
         "assets/js/lib/grid.js",
@@ -31,7 +31,8 @@
         "assets/js/lib/jquery.fitvid.js",
         "assets/js/lib/jquery.backstretch.min.js",
         "assets/js/lib/jquery.sudoslider.min.js",
-        "assets/js/main.js"
+        "assets/js/main.js",
+        "../node_modules/hammerjs/hammer.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -65,7 +66,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }
