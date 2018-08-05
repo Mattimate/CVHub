@@ -1,0 +1,116 @@
+.btn-default {
+  color: #fff;
+  background-color: #2f3238;
+  border-color: #ccc;
+}
+
+.project:hover {
+  background: #25292c;
+  color: #fff;
+  border-color: #25292c;
+}
+.details-section {
+  padding-bottom: 40px;
+  border: none;
+}
+
+.pict img {
+  margin-top: 10px;
+  width: 250px;
+}
+/*
+    BACK TO TOP
+*/
+.front-page-continue {
+  position: relative;
+  float: right;
+  margin-top: -81px;
+  margin-right: 1px;
+  width: 0px;
+  height: 0px;
+  color: #fff;
+  border-style: solid;
+  border-width: 0 0 60px 60px;
+  border-color: transparent transparent rgba(18, 24, 24, 0.4) transparent;
+}
+.front-page-continue span {
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  bottom: -27px;
+  display: inline-block;
+  left: -50px;
+  cursor: pointer;
+  height: 42px;
+  width: 60px;
+  line-height: 30px;
+  text-align: center;
+  z-index: 1000;
+}
+.front-page-continue a {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.front-page-continue .first i {
+  color: #fff;
+}
+.front-page-continue:hover .first i {
+  color: red;
+}
+
+/*
+    CONTINUE
+*/
+.front-page-back {
+  position: relative;
+  float: left;
+  margin-top: -81px;
+  margin-left: 1px;
+  width: 0px;
+  height: 0px;
+  color: #fff;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent transparent rgba(18, 24, 24, 0.4) transparent;
+}
+.front-page-back span {
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  bottom: -27px;
+  display: inline-block;
+  right: 10px;
+  cursor: pointer;
+  height: 42px;
+  width: 60px;
+  line-height: 30px;
+  text-align: center;
+}
+.front-page-back a {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.front-page-back .first i {
+  color: #fff;
+}
+.front-page-back:hover .first i {
+  color: red;
+}

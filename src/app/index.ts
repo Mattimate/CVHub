@@ -8,6 +8,6 @@ export * from "./blog/blog.component";
 export * from "./content/content.component";
 export * from "./content/skills/skills.component";
 export * from "./content/skills/skills-sidenav/skills-sidenav.component";
-export * from "./content/projects/projects.component";
+export * from "./content/front-page/front-page.component";
 export * from "./content/about-me/about-me.component";
 export * from "./content/video-profile/video-profile.component";

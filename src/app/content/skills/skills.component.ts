@@ -14,12 +14,10 @@ export class SkillsComponent implements OnInit {
 
   constructor(private dialog: MatDialog) {}
 
-  openDialog() {
-    this.SkillsSidenavRef = this.dialog.open(SkillsSidenavComponent, {
-      width: "350px",
-      height: "100%",
-      position: { right: "0" },
-      autoFocus: true
-    });
+  openDialog(side) {
+    var left = { width: "400px", height: "100%", position: { left: "0" }, autoFocus: true };
+    var right = { width: "400px", height: "100%", position: { right: "0" }, autoFocus: true };
+    var position = side === "left" ? left : right;
+    this.SkillsSidenavRef = this.dialog.open(SkillsSidenavComponent, position);
   }
 }

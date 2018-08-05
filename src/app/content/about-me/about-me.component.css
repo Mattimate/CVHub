@@ -12,8 +12,74 @@
 }
 
 .details-section {
-  min-height: 585px;
-  max-height: 585px;
+  margin-top: -3px;
+  display: block;
+  min-height: 640px;
+  max-height: 640px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.btn-details {
+  width: 32%;
+  padding: 12% 0%;
+  font-size: 20px;
+}
+
+.desc {
+  min-height: 276px;
+  max-height: 276px;
+}
+
+/*
+    BACK TO TOP
+*/
+.back {
+  position: relative;
+  float: right;
+  margin-top: -81px;
+  margin-right: 11px;
+  width: 0px;
+  height: 0px;
+  color: #fff;
+  border-style: solid;
+  border-width: 0 0 60px 60px;
+  border-color: transparent transparent rgba(18, 24, 24, 0.4) transparent;
+}
+.back span {
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  bottom: -27px;
+  display: inline-block;
+  left: -50px;
+  cursor: pointer;
+  height: 42px;
+  width: 60px;
+  line-height: 30px;
+  text-align: center;
+  z-index: 1000;
+}
+.back a {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.back .first i {
+  color: #fff;
+}
+.back:hover .first i {
+  color: red;
+}
+
+.fa {
+  font-weight: 700;
 }

@@ -317,6 +317,30 @@ p {
   -moz-animation-delay: 0.75s;
   -webkit-animation-delay: 0.75s;
 }
+.delay.six {
+  animation-delay: 0.9s;
+  -o-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+}
+.delay.seven {
+  animation-delay: 1.05s;
+  -o-animation-delay: 1.05s;
+  -moz-animation-delay: 1.05s;
+  -webkit-animation-delay: 1.05s;
+}
+.delay.eight {
+  animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+}
+.delay.nine {
+  animation-delay: 1.35s;
+  -o-animation-delay: 1.35s;
+  -moz-animation-delay: 1.35s;
+  -webkit-animation-delay: 1.35s;
+}
 /*
     SUPER SLIDES
 */

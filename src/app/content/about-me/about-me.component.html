@@ -21,15 +21,22 @@
                                     <strong>Matt Gordon</strong>
                                 </h4>
                                 <span>Software Engineer</span>
-                                <p>Hi, I'm Matt. I am a software engineer currently working as a Contractor for BAE Systems
-                                    AI.
+                                <p>
+                                    Hi, I'm Matt. I am a software engineer currently working as a Contractor for BAE Systems AI.currently working as a Contractor
+                                    for BAE engineer currently working as a Contractor for BAE
                                 </p>
                                 <div class="social">
-                                    <a href="javascript:;" class="animatez" data-effect="fadeInLeft">
+                                    <a href="javascript:;" class="animatez" data-effect="fadeIn">
                                         <i class="fa fa-facebook"></i>
                                     </a>
-                                    <a href="javascript:;" class="animatez" data-effect="fadeInRight">
+                                    <a href="javascript:;" class="animatez delay one" data-effect="fadeIn">
                                         <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="javascript:;" class="animatez delay two" data-effect="fadeIn">
+                                        <i class="fa fa-github"></i>
+                                    </a>
+                                    <a href="javascript:;" class="animatez delay three" data-effect="fadeIn">
+                                        <i class="fa fa-linkedin"></i>
                                     </a>
                                 </div>
                             </div>
@@ -38,7 +45,46 @@
                     <!-- /PERSON -->
 
                     <!-- DETAILS -->
-                    <div class="col-md-8 mg-sm well details-section animatez" align="justify" data-effect="fadeIn">
+                    <div id="about-main" class="col-md-8 mg-sm" align="justify">
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay one" data-effect="fadeInDown" matTooltip="View Employment"
+                            matTooltipPosition="above" (click)="view('Employment')">
+                            Employment
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay two" data-effect="fadeInDown" matTooltip="View Hobbies"
+                            matTooltipPosition="above">
+                            Hobbies
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay three" data-effect="fadeInDown" matTooltip="View Sports"
+                            matTooltipPosition="above">
+                            Sports
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay four" data-effect="fadeInLeft" matTooltip="View Mini Projects"
+                            matTooltipPosition="before">
+                            Mini Projects
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay five" data-effect="fadeIn">
+                            <span matTooltip="View Gaming" matTooltipPosition="above">Gaming</span>
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay six" data-effect="fadeInRight" matTooltip="View Experiences"
+                            matTooltipPosition="after">
+                            Experiences
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay seven" data-effect="fadeInUp" matTooltip="View Life"
+                            matTooltipPosition="below">
+                            Life
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay eight" data-effect="fadeInUp" matTooltip="View Photography"
+                            matTooltipPosition="below">
+                            Photography
+                        </div>
+                        <div class="col-md-4 btn btn-lg btn-dark btn-default btn-details animatez delay nine" data-effect="fadeInUp" matTooltip="View Web App"
+                            matTooltipPosition="below">
+                            Web App
+                        </div>
+
+                    </div>
+
+                    <div id="about-Employment" class="col-md-8 mg-sm well details-section animatez" align="justify" data-effect="fadeIn" style="display: none">
                         <div class="animatez" data-effect="fadeInRight">
                             <h3>Employment</h3>
                             <p>
@@ -52,7 +98,19 @@
                                 Big Blue Rover (BBR) game that was made in previous years; I took responsibility for the
                                 scoring system. For the main even I took on a couple of roles as an activity host for FortRon
                                 and Evo Dino, presenting and guiding 4 schools of 6 kids, aged approximately 10 years old
-                                through the games and as a tech support for BBR.
+                                through the games and as a tech support for BBR. 12311456
+                            </p>
+                            <h3>Hobbies</h3>
+                            <h4>Gaming</h4>
+                            <p>
+                                I have an interest in gaming that mainly involves creating a range of contents i.e. making racetracks on Halo and building
+                                structures on Minecraft, all of which can be uploaded and shared online. Another side is
+                                making videos to show off my designs and creativity.
+                            </p>
+                            <h4>Sports</h4>
+                            <p>
+                                My sporting interests include Ultimate Frisbee (UWE team vice-captain in 2012/13), squash, skiing, snowboarding, wake boarding
+                                and kite surfing. I also enjoy watching Formula 1 motor racing.
                             </p>
                             <h3>Hobbies</h3>
                             <h4>Gaming</h4>
@@ -68,10 +126,19 @@
                             </p>
                         </div>
                     </div>
+                    <div id="back" class="back animatez delay two" (click)="back()" data-effect="fadeIn" style="display: none" matTooltip="Return"
+                        matTooltipPosition="after">
+                        <span>
+                            <a class="first sscroll">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        </span>
+                    </div>
                     <!-- /DETAILS -->
                 </div>
             </div>
         </div>
+        <div class="spacer big"></div>
     </div>
 </section>
 <!-- END ABOUT ME -->
