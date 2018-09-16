@@ -1,24 +1,22 @@
-/* .section-wrapper-title {
-  padding-top: 70px;
-  background: #2f3238;
-  text-align: center;
-} */
+/*
+    Front Page Project section
+*/
+
 .section-wrapper {
   padding-top: 70px;
   background: #2f3238;
   text-align: center;
 }
 
-.title-break {
-  margin: 40px auto 40px auto;
+.underlay {
+  background-color: #2f3238;
 }
 
-.subtitle {
-  padding-left: 20px;
-  min-height: 0px;
-}
+/*
+    Project image position
+*/
 
-.background-left {
+.project-img-left {
   background-repeat: no-repeat;
   background-size: 50% 100%;
   min-height: 600px;
@@ -30,7 +28,7 @@
   transition: background 0.5s linear;
 }
 
-.background-right {
+.project-img-right {
   background-repeat: no-repeat;
   background-size: 50% 100%;
   min-height: 600px;
@@ -41,9 +39,9 @@
   transition: background 0.5s linear;
 }
 
-.underlay {
-  background-color: #2f3238;
-}
+/*
+    Project content position
+*/
 
 .position-left {
   text-align: right;
@@ -63,21 +61,18 @@
   min-width: 50%;
 }
 
-.project-btn {
-  padding-top: 240px;
-  margin: 0 auto;
-  max-width: 65%;
+/*
+    Project title
+*/
+
+.subtitle {
+  padding-left: 20px;
+  min-height: 0px;
 }
 
-.btn-snip {
-  width: 31%;
-  padding: 3% 0%;
-  font-size: 20px;
-}
-
-.btn-active {
-  background-color: #d30000;
-}
+/*
+    Project snips
+*/
 
 .snip-overlay {
   display: none;
@@ -99,14 +94,38 @@
   font-size: 20px;
 }
 
-.next-left {
+/*
+    Project snip Buttons
+*/
+
+.project-btn-snips {
+  padding-top: 240px;
+  margin: 0 auto;
+  max-width: 65%;
+}
+
+.btn-snip {
+  width: 31%;
+  padding: 3% 0%;
+  font-size: 20px;
+}
+
+.btn-active {
+  background-color: #d30000;
+}
+
+/*
+    Project page Buttons
+*/
+
+.project-page-btn-left {
   float: left;
   margin-top: 20px;
   margin-left: 20px;
   font-size: 25px;
   padding: 10px 30px;
 }
-.next-right {
+.project-page-btn-right {
   float: right;
   margin-top: 75px;
   margin-right: 40px;
