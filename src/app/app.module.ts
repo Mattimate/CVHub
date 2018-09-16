@@ -23,7 +23,8 @@ import {
   ContactComponent,
   VideoProfileComponent,
   BlogComponent,
-  SkillsSidenavComponent
+  SkillsSidenavComponent,
+  ProjectJson
 } from "app/.";
 
 @NgModule({
@@ -45,7 +46,7 @@ import {
   ],
   entryComponents: [SkillsSidenavComponent],
 
-  providers: [],
+  providers: [ProjectJson],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

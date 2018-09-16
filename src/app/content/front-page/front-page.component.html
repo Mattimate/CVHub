@@ -1,117 +1,37 @@
 <!-- BEGIN FRONT PAGE -->
-<section id="front-page">
-  <div class="section-wrapper">
-    <div class="section-title">
-      <h2 class="title animatez" data-effect="fadeInDown">FRONT PAGE PROJECTS</h2>
-      <h4 class="subtitle animatez" data-effect="fadeInUp">Matt's
-        <b class="main-color">Top Projects</b>
-      </h4>
-    </div>
-    <hr class="title-break">
-    <div class="section-inner">
-      <div class="container">
-        <div class="row">
-          <div id="front-page-main">
-            <div class="col-md-6 mg-sm animatez btn-default project" data-effect="fadeInUp" (click)="view('name1')">
-              <div class="left-icon">
-                <div class="icon">
-                  <i class="fa fa-envelope"></i>
-                </div>
-                <div class="left-content">
-                  <h4>
-                    <strong>Happy Client</strong>
-                  </h4>
-                  <p>Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis.
-                    Sed blandit augue vitae augue scelerisque bibendum.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mg-sm animatez delay one btn-default project" data-effect="fadeInUp">
-              <div class="left-icon">
-                <div class="icon">
-                  <i class="fa fa-comments-o"></i>
-                </div>
-                <div class="left-content">
-                  <h4>
-                    <strong>Trusted projects</strong>
-                  </h4>
-                  <p>Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis.
-                    Sed blandit augue vitae augue scelerisque bibendum.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mg-sm animatez btn-default project" data-effect="fadeInUp">
-              <div class="left-icon">
-                <div class="icon">
-                  <i class="fa fa-folder-open-o"></i>
-                </div>
-                <div class="left-content">
-                  <h4>
-                    <strong>Good Management</strong>
-                  </h4>
-                  <p>Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis.
-                    Sed blandit augue vitae augue scelerisque bibendum.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mg-sm animatez delay one btn-default project" data-effect="fadeInUp">
-              <div class="left-icon">
-                <div class="icon">
-                  <i class="fa fa-hdd-o"></i>
-                </div>
-                <div class="left-content">
-                  <h4>
-                    <strong>Double Security</strong>
-                  </h4>
-                  <p>Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis.
-                    Sed blandit augue vitae augue scelerisque bibendum.</p>
-                </div>
+<section id="front-page" class="underlay">
+  <div *ngFor="let project of projectData;">
+    <div id="project{{project.id}}" class="section-wrapper background-{{project.position}}">
+      <div class="section-title position-{{project.right}} col-md-6 {{project.offset}} ">
+        <div class="position-{{project.left}}">
+
+          <h2 class="title animatez" data-effect="fadeInDown">{{project.name}}</h2>
+          <h3 class="subtitle animatez" data-effect="fadeInUp">{{project.subtitle}}
+          </h3>
+          <div *ngFor="let snip of project.snip;">
+            <div id="{{snip.id}}" class="snip-overlay overlay-left" align="justify">
+              <div class="project-snip-text">
+                <h3>{{snip.catagory}}</h3>
+                {{snip.text}}
               </div>
             </div>
           </div>
-          <div id="project-name1" class="col-md-12 mg-sm well details-section animatez" align="justify" data-effect="fadeIn" style="display: none">
-            <div class="col-md-3 animatez" data-effect="fadeInRight">
-              <div class="pict">
-                <img src="assets/images/matt.jpg" alt="matt">
+          <div class="project-btn">
+            <div *ngFor="let btn of projectData[project.id].btn;">
+              <div id="btn_{{btn.id}}" class="col-md-4 btn btn-lg btn-dark btn-default btn-snip animatez delay {{btn.delay}}"
+                data-effect="fadeInDown" (click)="view(project.id, btn.snip)">
+                {{btn.name}}
               </div>
             </div>
-            <div class="col-md-9 animatez" data-effect="fadeInRight">
-              <h3>Employment</h3>
-              <p>
-                IBM – August 2014 to August 2015 (12 moth placement as Trainee Software Engineer) * Role – My primary activity was as a tester
-                of the Customer Information Control System (CICS) Explorer system. However, following a comprehensive period
-                of training, I was tasked with developing a Health Checker program, split between a server side application
-                and client, which checks the health of the CICS systems and reports the status via numerous forms of reporters
-                with the use of the MQTT protocol. The reporters included a Command Line Output, a TrayIcon and a GUI that
-                is accessed via the TrayIcon. * For the Giveback program, I joined a BlueFusion team. My team and I worked
-                on improving the Big Blue Rover (BBR) game that was made in previous years; I took responsibility for the
-                scoring system. For the main even I took on a couple of roles as an activity host for FortRon and Evo Dinos
-              </p>
-            </div>
-          </div>
-          <div id="front-page-back" class="front-page-back animatez delay two" (click)="back()" data-effect="fadeIn" style="display: none"
-            matTooltip="Return" matTooltipPosition="before">
-            <span>
-              <a class="first sscroll">
-                <i class="fa fa-angle-left"></i>
-              </a>
-            </span>
-          </div>
-          <div id="front-page-continue" class="front-page-continue animatez delay two" (click)="continue()" data-effect="fadeIn" style="display: none"
-            matTooltip="Continue" matTooltipPosition="after">
-            <span>
-              <a class="first sscroll">
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </span>
           </div>
         </div>
+        <button class="btn btn-lg btn-dark btn-default next-{{project.position}}" matTooltip="See {{project.name}}"
+          matTooltipPosition="before">
+          <i class="fa fa-chevron-{{project.position}}"></i>
+        </button>
+        <div class="spacer big"></div>
       </div>
     </div>
-    <button _ngcontent-c8="" class="btn btn-lg btn-dark next" matTooltip="See all projects" matTooltipPosition="before">
-      <i class="fa fa-chevron-right"></i>
-    </button>
-    <div class="spacer big"></div>
   </div>
 </section>
 <!-- END FRONT PAGE -->

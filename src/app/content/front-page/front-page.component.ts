@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import * as $ from "jquery";
+import { ProjectJson } from "app/content/front-page/project-json";
 
 @Component({
   selector: "app-front-page",
@@ -6,32 +8,45 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./front-page.component.css"]
 })
 export class FrontPageComponent implements OnInit {
-  private selectedProject;
-  private frontPageMain;
-  private backToMain;
-  private continue;
+  private projectData;
+  private media;
+  private prevSnip = { 1: "", 2: "", 3: "" };
 
-  constructor() {}
+  constructor(private projectJson: ProjectJson) {}
 
   ngOnInit() {
-    this.frontPageMain = this.getElement("front-page-main");
-    this.backToMain = this.getElement("front-page-back");
-    this.continue = this.getElement("front-page-continue");
+    this.projectData = this.projectJson.getProductData();
+    this.media = this.projectJson.getMedia();
+
+    setTimeout(() => {
+      for (let i = 0; i < Object.keys(this.media).length; i++) {
+        $("#project" + i).css("background-image", "url(" + this.media[i].link[0] + ")");
+        $("#project" + i + "_snip0").show();
+      }
+    }, 1);
   }
 
-  view(project) {
-    this.selectedProject = this.getElement("project-" + project);
-    this.frontPageMain.style.display = "none";
-    this.selectedProject.style.display = "block";
-    this.backToMain.style.display = "block";
-    this.continue.style.display = "block";
-  }
+  view(project, snip) {
+    let cmp = this;
+    let snipRef = "project" + project + "_snip" + snip;
+    this.prevSnip[project] != snipRef ? switchSnip() : toggleSnip();
+    this.prevSnip[project] = snipRef;
 
-  back() {
-    this.frontPageMain.style.display = "block";
-    this.selectedProject.style.display = "none";
-    this.backToMain.style.display = "none";
-    this.continue.style.display = "none";
+    function switchSnip() {
+      cmp.prevSnip[project] ? $("#" + cmp.prevSnip[project]).hide() : $("#project" + project + "_snip0").hide();
+      $("#btn_" + cmp.prevSnip[project]).removeClass("btn-active");
+      $("#" + snipRef).fadeIn("slow");
+      $("#btn_" + snipRef).addClass("btn-active");
+      $("#project" + project).css("background-image", "url(" + cmp.media[project].link[snip] + ")");
+    }
+
+    function toggleSnip() {
+      $("#" + snipRef).hide();
+      $("#btn_" + snipRef).removeClass("btn-active");
+      snipRef = "project" + project + "_snip" + 0;
+      $("#" + snipRef).fadeIn("slow");
+      $("#project" + project).css("background-image", "url(" + cmp.media[project].link[0] + ")");
+    }
   }
 
   getElement(ref) {
