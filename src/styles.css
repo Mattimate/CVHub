@@ -1,0 +1,37 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+/*
+    Scroll Bar
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2f3238;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d30000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+/*
+    Dialog
+*/
+.mat-dialog-container {
+  background-color: #2f3238;
+}
+
+/*
+    Next page button
+*/
+.next {
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 25px;
+  padding: 10px 30px;
+}

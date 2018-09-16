@@ -1,0 +1,37 @@
+<!-- BEGIN FRONT PAGE -->
+<section id="front-page" class="underlay">
+  <div *ngFor="let project of projectData;">
+    <div id="project{{project.id}}" class="section-wrapper background-{{project.position}}">
+      <div class="section-title position-{{project.right}} col-md-6 {{project.offset}} ">
+        <div class="position-{{project.left}}">
+
+          <h2 class="title animatez" data-effect="fadeInDown">{{project.name}}</h2>
+          <h3 class="subtitle animatez" data-effect="fadeInUp">{{project.subtitle}}
+          </h3>
+          <div *ngFor="let snip of project.snip;">
+            <div id="{{snip.id}}" class="snip-overlay overlay-left" align="justify">
+              <div class="project-snip-text">
+                <h3>{{snip.catagory}}</h3>
+                {{snip.text}}
+              </div>
+            </div>
+          </div>
+          <div class="project-btn">
+            <div *ngFor="let btn of projectData[project.id].btn;">
+              <div id="btn_{{btn.id}}" class="col-md-4 btn btn-lg btn-dark btn-default btn-snip animatez delay {{btn.delay}}"
+                data-effect="fadeInDown" (click)="view(project.id, btn.snip)">
+                {{btn.name}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-lg btn-dark btn-default next-{{project.position}}" matTooltip="See {{project.name}}"
+          matTooltipPosition="before">
+          <i class="fa fa-chevron-{{project.position}}"></i>
+        </button>
+        <div class="spacer big"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END FRONT PAGE -->

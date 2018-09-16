@@ -31,7 +31,8 @@
         "assets/js/lib/jquery.fitvid.js",
         "assets/js/lib/jquery.backstretch.min.js",
         "assets/js/lib/jquery.sudoslider.min.js",
-        "assets/js/main.js"
+        "assets/js/main.js",
+        "../node_modules/hammerjs/hammer.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

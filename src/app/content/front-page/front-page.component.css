@@ -1,0 +1,115 @@
+/* .section-wrapper-title {
+  padding-top: 70px;
+  background: #2f3238;
+  text-align: center;
+} */
+.section-wrapper {
+  padding-top: 70px;
+  background: #2f3238;
+  text-align: center;
+}
+
+.title-break {
+  margin: 40px auto 40px auto;
+}
+
+.subtitle {
+  padding-left: 20px;
+  min-height: 0px;
+}
+
+.background-left {
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  min-height: 600px;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: right top, left top;
+
+  transition: background 0.5s linear;
+}
+
+.background-right {
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  min-height: 600px;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: background 0.5s linear;
+}
+
+.underlay {
+  background-color: #2f3238;
+}
+
+.position-left {
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+  min-height: 415px;
+  max-height: 415px;
+  min-width: 100%;
+}
+
+.position-right {
+  text-align: left;
+  float: left;
+  padding-left: 20px;
+  min-height: 415px;
+  max-height: 415px;
+  min-width: 50%;
+}
+
+.project-btn {
+  padding-top: 240px;
+  margin: 0 auto;
+  max-width: 65%;
+}
+
+.btn-snip {
+  width: 31%;
+  padding: 3% 0%;
+  font-size: 20px;
+}
+
+.btn-active {
+  background-color: #d30000;
+}
+
+.snip-overlay {
+  display: none;
+  width: 92%;
+  padding-left: 20px;
+}
+
+.overlay-left {
+  position: absolute;
+  float: left;
+}
+
+.overlay-right {
+  float: right;
+  margin-right: 40px;
+}
+
+.project-snip-text {
+  font-size: 20px;
+}
+
+.next-left {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 25px;
+  padding: 10px 30px;
+}
+.next-right {
+  float: right;
+  margin-top: 75px;
+  margin-right: 40px;
+  font-size: 25px;
+  padding: 10px 30px;
+}

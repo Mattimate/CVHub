@@ -1,1 +1,7 @@
-
+/*
+    Tooltop
+*/
+::ng-deep.mat-tooltip {
+  background-color: #25292c;
+  font-size: 16px;
+}

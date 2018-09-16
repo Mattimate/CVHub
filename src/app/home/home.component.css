@@ -1,0 +1,16 @@
+a {
+  color: #fff;
+  margin-top: 10%;
+  width: 45px;
+  height: 45px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 25px;
+  display: inline-block;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  outline: 0;
+}
