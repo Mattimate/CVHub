@@ -9,18 +9,16 @@ import { ProjectJson } from "app/content/front-page/project-json";
 })
 export class FrontPageComponent implements OnInit {
   private projectData;
-  private media;
   private prevSnip = { 1: "", 2: "", 3: "" };
 
   constructor(private projectJson: ProjectJson) {}
 
   ngOnInit() {
     this.projectData = this.projectJson.getProductData();
-    this.media = this.projectJson.getMedia();
 
     setTimeout(() => {
-      for (let i = 0; i < Object.keys(this.media).length; i++) {
-        $("#project" + i).css("background-image", "url(" + this.media[i].link[0] + ")");
+      for (let i = 0; i < Object.keys(this.projectData).length; i++) {
+        $("#project" + i).css("background-image", "url(" + this.projectData[i].link[0] + ")");
         $("#project" + i + "_snip0").show();
       }
     }, 1);
@@ -37,7 +35,7 @@ export class FrontPageComponent implements OnInit {
       $("#btn_" + cmp.prevSnip[project]).removeClass("btn-active");
       $("#" + snipRef).fadeIn("slow");
       $("#btn_" + snipRef).addClass("btn-active");
-      $("#project" + project).css("background-image", "url(" + cmp.media[project].link[snip] + ")");
+      $("#project" + project).css("background-image", "url(" + cmp.projectData[project].link[snip] + ")");
     }
 
     function toggleSnip() {
@@ -45,7 +43,7 @@ export class FrontPageComponent implements OnInit {
       $("#btn_" + snipRef).removeClass("btn-active");
       snipRef = "project" + project + "_snip" + 0;
       $("#" + snipRef).fadeIn("slow");
-      $("#project" + project).css("background-image", "url(" + cmp.media[project].link[0] + ")");
+      $("#project" + project).css("background-image", "url(" + cmp.projectData[project].link[0] + ")");
     }
   }
 

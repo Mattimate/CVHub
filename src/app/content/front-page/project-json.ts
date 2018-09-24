@@ -1,10 +1,4 @@
 export class ProjectJson {
-  private path = "assets/images/placeholders/";
-  private media = {
-    0: { link: { 0: this.path + "Gaming1.jpg", 1: this.path + "chart1.jpeg", 2: this.path + "chart2.jpeg", 3: this.path + "chart3.jpeg" } },
-    1: { link: { 0: this.path + "GreenCity.jpeg", 1: this.path + "chart1.jpeg", 2: this.path + "chart2.jpeg", 3: this.path + "chart3.jpeg" } },
-    2: { link: { 0: this.path + "Gaming4.jpg", 1: this.path + "chart1.jpeg", 2: this.path + "chart2.jpeg", 3: this.path + "chart3.jpeg" } }
-  };
   private projectData = [
     {
       id: 0,
@@ -14,6 +8,12 @@ export class ProjectJson {
       offset: "col-md-offset-6",
       name: "Team Health Check",
       subtitle: "Questionnaire to monitor health of team",
+      link: {
+        0: "assets/images/placeholders/Gaming1.jpg",
+        1: "assets/images/placeholders/chart1.jpeg",
+        2: "assets/images/placeholders/chart2.jpeg",
+        3: "assets/images/placeholders/chart3.jpeg"
+      },
       snip: [
         { id: "project0_snip0", catagory: "Catagory: project0_snip0", text: "text: project0_snip0" },
         { id: "project0_snip1", catagory: "Catagory: project0_snip1", text: "text: project0_snip1" },
@@ -34,6 +34,12 @@ export class ProjectJson {
       offset: "",
       name: "Health Checker",
       subtitle: "Questionnaire to monitor health of team",
+      link: {
+        0: "assets/images/placeholders/GreenCity.jpeg",
+        1: "assets/images/placeholders/chart1.jpeg",
+        2: "assets/images/placeholders/chart2.jpeg",
+        3: "assets/images/placeholders/chart3.jpeg"
+      },
       snip: [
         { id: "project1_snip0", catagory: "Catagory: project1_snip0", text: "text: project1_snip0" },
         { id: "project1_snip1", catagory: "Catagory: project1_snip1", text: "text: project1_snip1" },
@@ -54,6 +60,12 @@ export class ProjectJson {
       offset: "col-md-offset-6",
       name: "Custom Build",
       subtitle: "A custom build of my >pc",
+      link: {
+        0: "assets/images/placeholders/Gaming4.jpg",
+        1: "assets/images/placeholders/chart1.jpeg",
+        2: "assets/images/placeholders/chart2.jpeg",
+        3: "assets/images/placeholders/chart3.jpeg"
+      },
       snip: [
         { id: "project2_snip0", catagory: "Catagory: project3_snip0", text: "text: project3_snip0" },
         { id: "project2_snip1", catagory: "Catagory: project3_snip1", text: "text: project3_snip1" },
@@ -70,8 +82,5 @@ export class ProjectJson {
 
   getProductData() {
     return this.projectData;
-  }
-  getMedia() {
-    return this.media;
   }
 }
