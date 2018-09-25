@@ -1,8 +1,10 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./in-memory-data.service";
 
 import { MaterialModule } from "./material.module";
 
@@ -22,12 +24,19 @@ import {
   ContactComponent,
   VideoProfileComponent,
   BlogComponent,
-  SkillsSidenavComponent,
-  ProjectJson
+  SkillsSidenavComponent
 } from "app/.";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, MaterialModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -45,7 +54,7 @@ import {
   ],
   entryComponents: [SkillsSidenavComponent],
 
-  providers: [ProjectJson],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

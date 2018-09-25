@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Sanitizer } from "@angular/core";
 import * as $ from "jquery";
-import { ProjectJson } from "app/content/front-page/project-json";
+import { ProjectService } from "service/.";
+import { Project } from "model/.";
 
 @Component({
   selector: "app-front-page",
@@ -8,20 +9,27 @@ import { ProjectJson } from "app/content/front-page/project-json";
   styleUrls: ["./front-page.component.css"]
 })
 export class FrontPageComponent implements OnInit {
-  private projectData;
+  private subscription = { getProjects: null };
+  private projects: Project[];
   private prevSnip = { 1: "", 2: "", 3: "" };
-
-  constructor(private projectJson: ProjectJson) {}
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
-    this.projectData = this.projectJson.getProductData();
+    this.getFrontPageProjects();
+  }
 
-    setTimeout(() => {
-      for (let i = 0; i < Object.keys(this.projectData).length; i++) {
-        $("#project" + i).css("background-image", "url(" + this.projectData[i].link[0] + ")");
-        $("#project" + i + "_snip0").show();
-      }
-    }, 1);
+  getFrontPageProjects() {
+    this.subscription.getProjects = this.projectService.getFrontPageProjects().subscribe(projects => {
+      this.projects = projects;
+      console.log("1", this.projects);
+
+      setTimeout(() => {
+        for (let i = 0; i < Object.keys(this.projects).length; i++) {
+          $("#project" + i).css("background-image", "url(" + this.projects[i].img[0]["link"] + ")");
+          $("#project" + i + "_snip0").show();
+        }
+      }, 0);
+    });
   }
 
   view(project, snip) {
@@ -35,7 +43,7 @@ export class FrontPageComponent implements OnInit {
       $("#btn_" + cmp.prevSnip[project]).removeClass("btn-active");
       $("#" + snipRef).fadeIn("slow");
       $("#btn_" + snipRef).addClass("btn-active");
-      $("#project" + project).css("background-image", "url(" + cmp.projectData[project].link[snip] + ")");
+      $("#project" + project).css("background-image", "url(" + cmp.projects[project].img[snip]["link"] + ")");
     }
 
     function toggleSnip() {
@@ -43,11 +51,7 @@ export class FrontPageComponent implements OnInit {
       $("#btn_" + snipRef).removeClass("btn-active");
       snipRef = "project" + project + "_snip" + 0;
       $("#" + snipRef).fadeIn("slow");
-      $("#project" + project).css("background-image", "url(" + cmp.projectData[project].link[0] + ")");
+      $("#project" + project).css("background-image", "url(" + cmp.projects[project].img[0]["link"] + ")");
     }
-  }
-
-  getElement(ref) {
-    return document.getElementById(ref);
   }
 }
