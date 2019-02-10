@@ -1,0 +1,28 @@
+/*
+    Project img Buttons
+*/
+.img-btn-left {
+  float: left;
+  font-size: 25px;
+  padding: 7px 15px;
+  margin-left: 5px;
+}
+.img-btn-right {
+  float: right;
+  font-size: 25px;
+  padding: 7px 15px;
+  margin-right: 5px;
+}
+
+.top-btn-group-right {
+  margin-top: -465px;
+}
+.top-btn-group-left {
+  margin-top: -50px;
+}
+.bottom-btn-group-right {
+  margin-top: 40px;
+}
+.bottom-btn-group-left {
+  margin-top: 450px;
+}

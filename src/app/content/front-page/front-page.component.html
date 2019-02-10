@@ -1,36 +1,40 @@
 <!-- BEGIN FRONT PAGE -->
 <section id="front-page" class="underlay">
-  <div *ngFor="let project of projectData;">
-    <div id="project{{project.id}}" class="section-wrapper project-img-{{project.position}}">
-      <div class="section-title position-{{project.right}} col-md-6 {{project.offset}} ">
-        <div class="position-{{project.left}}">
-
-          <h2 class="title animatez" data-effect="fadeInDown">{{project.name}}</h2>
-          <h3 class="subtitle animatez" data-effect="fadeInUp">{{project.subtitle}}
-          </h3>
-          <div *ngFor="let snip of project.snip;">
-            <div id="{{snip.id}}" class="snip-overlay overlay-left" align="justify">
+  <div *ngFor="let proj of projects">
+    <div id="project{{ proj.id }}" class="section-wrapper project-img img-{{ proj.opposite }}">
+      <div class="section-title isright-position-{{ proj.position }} col-md-6 {{ proj.offset }} ">
+        <div class="isleft-position-{{ proj.position }}">
+          <h2 id="title{{ proj.id }}" class="title" data-effect="fadeInDown">{{ proj.title }}</h2>
+          <h3 id="subtitle{{ proj.id }}" class="subtitle" data-effect="fadeInUp">{{ proj.subtitle }}</h3>
+          <div *ngFor="let snip of projects[proj.id].snip">
+            <div id="{{ snip.id }}" class="snip-overlay overlay-left" align="justify">
               <div class="project-snip-text">
-                <h3>{{snip.catagory}}</h3>
-                {{snip.text}}
+                <h3 id="{{ snip.id }}_catagory">{{ snip.catagory }}</h3>
+                <div id="{{ snip.id }}_text">{{ snip.text }}</div>
               </div>
             </div>
           </div>
-          <div class="project-btn-snips">
-            <div *ngFor="let btn of projectData[project.id].btn;">
-              <div id="btn_{{btn.id}}" class="col-md-4 btn btn-lg btn-dark btn-default btn-snip animatez delay {{btn.delay}}"
-                data-effect="fadeInDown" (click)="view(project.id, btn.snip)">
-                {{btn.name}}
+          <div class="project-snip-btns ">
+            <div *ngFor="let snip of projects[proj.id].snip">
+              <div
+                *ngIf="snip.btnName"
+                id="btn_{{ snip.id }}"
+                class="col-md-6 btn btn-lg btn-dark btn-snip"
+                data-effect="fadeInDown"
+                (click)="view(proj, snip.id.substring(13))"
+              >
+                {{ snip.btnName }}
+                <span *ngIf="proj.editor">
+                  <i class="fa fa-edit"></i>
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <button class="btn btn-lg btn-dark btn-default project-page-btn-{{project.position}}" matTooltip="See {{project.name}}"
-          matTooltipPosition="before">
-          <i class="fa fa-chevron-{{project.position}}"></i>
-        </button>
+        <app-content-editor [projects]="projects" [project]="proj"></app-content-editor>
         <div class="spacer big"></div>
       </div>
+      <app-image-editor [projects]="projects" [project]="proj" (uploaded)="reload($event)"></app-image-editor>
     </div>
   </div>
 </section>

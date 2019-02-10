@@ -15,50 +15,39 @@
 /*
     Project image position
 */
-
-.project-img-left {
+.project-img {
   background-repeat: no-repeat;
   background-size: 50% 100%;
   min-height: 600px;
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
-  background-position: right top, left top;
-
   transition: background 0.5s linear;
 }
 
-.project-img-right {
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
-  min-height: 600px;
-  max-width: 2000px;
-  margin-left: auto;
-  margin-right: auto;
-
-  transition: background 0.5s linear;
+.img-right {
+  background-position: right top, left top;
 }
 
 /*
     Project content position
 */
-
-.position-left {
-  text-align: right;
-  float: right;
-  padding-right: 20px;
-  min-height: 415px;
-  max-height: 415px;
-  min-width: 100%;
-}
-
-.position-right {
+.isright-position-right {
   text-align: left;
   float: left;
   padding-left: 20px;
   min-height: 415px;
   max-height: 415px;
   min-width: 50%;
+}
+
+.isleft-position-left {
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+  min-height: 415px;
+  max-height: 415px;
+  min-width: 100%;
 }
 
 /*
@@ -98,37 +87,69 @@
     Project snip Buttons
 */
 
-.project-btn-snips {
+.project-snip-btns {
   padding-top: 240px;
   margin: 0 auto;
-  max-width: 65%;
+  max-width: 80%;
 }
 
 .btn-snip {
   width: 31%;
   padding: 3% 0%;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1800px) {
+  .btn-snip {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .btn-snip {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .btn-snip {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .btn-snip {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .btn-snip {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .btn-snip {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .btn-snip {
+    font-size: 11px;
+  }
+}
+
+.dropdown-menu {
+  background-color: #25292c;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #d30000;
+  color: #fff;
 }
 
 .btn-active {
   background-color: #d30000;
 }
 
-/*
-    Project page Buttons
-*/
-
-.project-page-btn-left {
-  float: left;
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 25px;
-  padding: 10px 30px;
-}
-.project-page-btn-right {
+.fa-edit {
   float: right;
-  margin-top: 75px;
-  margin-right: 40px;
-  font-size: 25px;
-  padding: 10px 30px;
+  margin-top: 1.5px;
+  margin-right: 10px;
 }

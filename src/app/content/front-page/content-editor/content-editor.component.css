@@ -1,0 +1,36 @@
+/*
+    Project page Buttons
+*/
+.project-btns {
+  margin-top: 93px;
+}
+
+.btn-left {
+  float: left;
+  font-size: 25px;
+  padding: 10px 30px;
+  margin-left: 10px;
+}
+.btn-right {
+  float: right;
+  font-size: 25px;
+  padding: 10px 30px;
+  margin-right: 10px;
+}
+
+.isleft-btn-left {
+  margin-top: 40px;
+}
+
+.save-btn {
+  background: #00a20e;
+}
+.save-btn:hover {
+  background: #18c828;
+}
+.cancel-btn {
+  background: #d30000;
+}
+.cancel-btn:hover {
+  background: #ff0000;
+}

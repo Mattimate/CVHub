@@ -1,0 +1,32 @@
+<div id="imageEditor" *ngIf="project.editor">
+  <div class="col-md-6 top-btn-group-{{ project.position }}">
+    <button
+      *ngIf="project != projects[0]"
+      class="btn btn-lg btn-dark img-btn-{{ project.position }} "
+      matTooltip="Move up one"
+      matTooltipPosition="above"
+      (click)="move('up')"
+    >
+      <i class="fa fa-chevron-up"></i>
+    </button>
+    <button class="btn btn-lg btn-dark img-btn-{{ project.position }} " matTooltip="Swap image location" matTooltipPosition="above" (click)="move('swap')">
+      <i class="material-icons"> swap_horiz </i>
+    </button>
+    <button class="btn btn-lg btn-dark img-btn-{{ project.position }} " matTooltip="Add/change image" matTooltipPosition="above">
+      <i class="material-icons">
+        add_photo_alternate
+      </i>
+    </button>
+  </div>
+  <div class="col-md-6 bottom-btn-group-{{ project.position }}">
+    <button
+      *ngIf="project.order != projects.length"
+      class="btn btn-lg btn-dark img-btn-{{ project.position }} "
+      matTooltip="Move down one"
+      matTooltipPosition="above"
+      (click)="move('down')"
+    >
+      <i class="fa fa-chevron-down"></i>
+    </button>
+  </div>
+</div>
