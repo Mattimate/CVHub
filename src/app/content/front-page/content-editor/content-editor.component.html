@@ -1,0 +1,39 @@
+<div class="project-btns">
+  <button
+    class="btn btn-lg btn-dark btn-{{ project.position }} isleft-btn-{{ project.position }}"
+    matTooltip="See {{ project.title }}"
+    matTooltipPosition="above"
+  >
+    <i class="fa fa-chevron-{{ project.position }}"></i>
+  </button>
+  <button
+    id="edit-project{{ project.id }}"
+    *ngIf="!project.editor"
+    class="btn btn-lg btn-dark btn-{{ project.position }} isleft-btn-{{ project.position }}"
+    matTooltip="Edit {{ project.title }}"
+    matTooltipPosition="above"
+    (click)="edit(project)"
+  >
+    Edit
+  </button>
+  <button
+    id="cancel-project{{ project.id }}"
+    *ngIf="project.editor"
+    class="btn btn-lg btn-dark btn-{{ project.position }} isleft-btn-{{ project.position }} cancel-btn"
+    matTooltip="Discard changes"
+    matTooltipPosition="above"
+    (click)="cancel(project)"
+  >
+    Cancel
+  </button>
+  <button
+    id="save-project{{ project.id }}"
+    *ngIf="project.editor"
+    class="btn btn-lg btn-dark btn-{{ project.position }} isleft-btn-{{ project.position }} save-btn"
+    matTooltip="Save changes"
+    matTooltipPosition="above"
+    (click)="save(project)"
+  >
+    Save
+  </button>
+</div>
